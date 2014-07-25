@@ -18,7 +18,7 @@ a div.button:visited {
 
 #container {
 	overflow: hidden;
-	margin-top: 70px;
+	margin-top: 80px;
 }
 
 body {
@@ -47,6 +47,11 @@ header#main {
 	top: 0;
 }
 
+article {
+	margin-top: 40px;
+	margin-bottom: 70px 0;
+}
+
 h2 {
 	font-family: Knewave;
 	text-decoration: none;
@@ -54,6 +59,13 @@ h2 {
 
 p.byline {
 	margin-top: -18px;
+	margin-bottom: 20px;
+	font-style: italic;
+
+}
+
+p {
+	font-family: Helvetica;
 }
 
 div.button {
