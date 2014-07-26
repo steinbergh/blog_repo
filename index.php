@@ -9,7 +9,7 @@
 <div id="container">
   	<header id="main">Hot List!</header>
 	<?php 
-	$connection = mysql_connect('127.0.0.1', 'root', '');
+	$connection = mysql_connect('23.92.19.55', 'root', '');
 	mysql_select_db('henry_blog');
 
 	  if (!$connection) {	
