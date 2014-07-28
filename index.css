@@ -38,18 +38,19 @@ header#main {
 	left: 0;
 	top: 0;
 	/*b*//*order-bottom: 4px solid #FF69B4;*/
-	-webkit-box-shadow: 0px 0px 20px 0px rgba(255,105,180,1);
-	-moz-box-shadow: 0px 0px 20px 0px rgba(255,105,180,1);
-	box-shadow: 0px 0px 20px 0px rgba(255,105,180,1);
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,.1);
+	/* this is the pink shadoe rgba(255,105,180,18)*/
 }
 
-ul.menu {
+nav.menu {
 	width: 100%;
 	margin-left: -45px;
 	list-style: none;
 }
 
-li.tab {
+.tab {
 	font-size: 0.5em;
 	float: left;
 	margin-right: 20px;

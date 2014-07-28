@@ -6,17 +6,17 @@
 <div id="container">
     <header id="main">
       Hot List!
-    <ul class="menu">
+    <nav class="menu">
       <?php 
       $menu = array(
         'HOME'=>'index.php', 
         'SUBMISSION'=>'submit',
         "AUTHOR'S INDEX"=>'authind');
         foreach ($menu as $tab => $link) {
-        echo '<li class="tab"><a href="'. $link .'">' . $tab . '</a></li>';
+        echo '<a class="tab" href="'. $link .'">' . $tab . '</a>';
       }
       ?>
-    </ul>
+    </nav>
     </header>
 	<?php 
 	$connection = mysql_connect('23.92.19.55', 'root', '');
