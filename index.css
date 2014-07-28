@@ -50,11 +50,11 @@ nav.menu {
 }
 
 .tab {
-	font-size: 0.5em;
+	font-size: 0.25em;
 	float: left;
 	margin-right: 20px;
 	margin-left: 3px;
-	margin-top: -30px;
+	margin-top: 30px;
 	padding: 0 5px 0 0;
 
 }
