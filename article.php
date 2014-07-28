@@ -4,7 +4,20 @@
 </head>
 <body>
 <div id="container">
-	<header id="main">Hot List!</header>
+    <header id="main">
+      Hot List!
+    <ul class="menu">
+      <?php 
+      $menu = array(
+        'HOME'=>'index.php', 
+        'SUBMISSION'=>'submit',
+        "AUTHOR'S INDEX"=>'authind');
+        foreach ($menu as $tab => $link) {
+        echo '<li class="tab"><a href="'. $link .'">' . $tab . '</a></li>';
+      }
+      ?>
+    </ul>
+    </header>
 	<?php 
 	$connection = mysql_connect('23.92.19.55', 'root', '');
 	mysql_select_db('henry_blog');
@@ -20,14 +33,13 @@
 
     $article = mysql_fetch_array($result);
     	print '<article>';
-    	print '<h2><a href="article.php?id=' . $article['id'] . '">' . $article['title'] . '</a></h2>';
+    	print '<h1><a href="article.php?id=' . $article['id'] . '">' . $article['title'] . '</a></h1>';
    		print '<p class="byline">by, ' . $article['author'] . '</p>';
     	print '<p>' . $article['body'] . '</p>';
 		print '</article>';
 
 	mysql_close($connection);
 	?>
-	<a href="index.php"><div class="button">back</div></a>
 </div>
 </body>
 </html>
