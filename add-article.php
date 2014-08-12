@@ -1,3 +1,13 @@
+<?php
+try {
+    $connection = new PDO('mysql:host=127.0.0.1;port=3306;dbname=henry_blog', 'root', '');
+    //print "success";
+} catch (PDOException $e) {
+    print "Error!: "  . $e->getMessage() . "<br />";
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,19 +36,12 @@
     // $connection = mysql_connect('23.92.19.55', 'root', '');
     // mysql_select_db('henry_blog');
 
-  $connection = mysql_connect('127.0.0.1', 'root', '');
-  mysql_select_db('henry_blog');
-
-    if (!$connection) { 
-    die('Unable to connect: ' . mysql_errno());
-    }
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['title'] != "" && $_POST['author'] != "" && $_POST['body'] != "") {
         $title = $_POST['title'];
         $author = $_POST['author'];
         $body = $_POST['body'];
-        $sql = 'INSERT INTO article VALUES(:title, :author, :body)';
+        $sql = 'INSERT INTO articles VALUES(:title, :author, :body)';
         $stmt = $connection->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
         $result = $stmt->execute(array(':title' => $title, ':author' => $author, ':body' => $body));
         if ($result) {
@@ -81,7 +84,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <?php
 }
-
 ?>
 </div>
 </body>
