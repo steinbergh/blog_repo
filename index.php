@@ -15,7 +15,7 @@
       <nav class="menu">
         <?php 
         $menu = array(
-          'HOME'=>'index.php', 
+          'HOME'=>'index.php'; 
           // "AUTHOR'S INDEX"=>'authind');
           foreach ($menu as $tab => $link) {
           echo '<a class="tab" href="'. $link .'"><span>' . $tab . '</span></a>';
