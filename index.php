@@ -16,7 +16,6 @@
         <?php 
         $menu = array(
           'HOME'=>'index.php', 
-          'SUBMISSION'=>'add-article.php');
           // "AUTHOR'S INDEX"=>'authind');
           foreach ($menu as $tab => $link) {
           echo '<a class="tab" href="'. $link .'"><span>' . $tab . '</span></a>';
@@ -29,11 +28,11 @@
     <!--START MAIN CONTENT-->
     <div id="content-wrap">
 	   <?php    
-  	// $connection = mysql_connect('23.92.19.55', 'root', '');
-  	// mysql_select_db('henry_blog');
+  	$connection = mysql_connect('23.92.19.55', 'root', '');
+  	mysql_select_db('henry_blog');
 
-    $connection = mysql_connect('127.0.0.1', 'root', '');
-    mysql_select_db('henry_blog');
+    // $connection = mysql_connect('127.0.0.1', 'root', '');
+    // mysql_select_db('henry_blog');
 
 	  if (!$connection) {	
       die('Unable to connect: ' . mysql_errno());
